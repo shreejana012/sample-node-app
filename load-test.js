@@ -6,7 +6,7 @@ export let options = {
 };
 export default function () {
   const rnd = Math.floor(Math.random() * 1000);
-  let res = http.get(`http://localhost:3000/${rnd}`);
+  let res = http.get(`https://load-testing.azurewebsites.net/${rnd}`);
   check(res, {
     success: (r) => r.status == 200,
   });
